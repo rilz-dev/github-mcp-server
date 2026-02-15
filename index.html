@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RILZ STORE | Dark Stealth</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com">
+    <style>
+        @keyframes pulse-slow {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.04); }
+        }
+        .btn-premium {
+            animation: pulse-slow 3s infinite ease-in-out;
+        }
+        body {
+            background-color: #050505;
+            color: #a1a1aa;
+        }
+        .card-dark {
+            background: #0f0f0f;
+            border: 1px solid #1f1f1f;
+        }
+        .card-dark:hover {
+            border-color: #3b82f6;
+            background: #121212;
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased">
+
+    <!-- Music Player (SEKARANG DI POJOK KANAN ATAS) -->
+    <div class="fixed top-6 right-6 z-50 flex items-center gap-3 bg-[#0f0f0f] border border-zinc-800 p-2 pr-5 rounded-full shadow-2xl">
+        <button onclick="toggleMusic()" id="musicBtn" class="w-9 h-9 bg-blue-600 rounded-full flex items-center justify-center text-white transition-all">
+            <i id="musicIcon" class="fas fa-play text-xs"></i>
+        </button>
+        <div id="music-info">
+            <div class="text-[9px] text-white font-black leading-none uppercase tracking-tighter">Audio</div>
+            <div class="text-[8px] text-zinc-600 uppercase font-bold">System On</div>
+        </div>
+    </div>
+
+    <!-- Header / Brand (Pindah ke kiri karena kanan dipakai musik) -->
+    <nav class="p-8 flex justify-start items-center max-w-6xl mx-auto">
+        <div class="text-xl font-black tracking-[0.2em] text-white">
+            RILZ STORE<span class="text-blue-600">.</span>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="max-w-6xl mx-auto px-8 py-10">
+        <div class="mb-16">
+            <h1 class="text-5xl font-black text-white mb-3 tracking-tighter">DIGITAL<br><span class="text-blue-600">SERVICES.</span></h1>
+            <p class="text-zinc-600 text-xs font-bold uppercase tracking-widest leading-loose">Premium Quality Only • High Speed Process • Best Price</p>
+        </div>
+
+        <!-- Grid Produk -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            
+            <!-- Nokos -->
+            <div class="card-dark p-8 rounded-2xl transition-all duration-500 group">
+                <div class="w-10 h-10 border border-zinc-800 rounded-lg flex items-center justify-center mb-6 group-hover:border-blue-600 transition-colors">
+                    <i class="fas fa-sim-card text-zinc-700 group-hover:text-blue-500"></i>
+                </div>
+                <h2 class="text-white font-bold text-lg mb-1 italic">NOKOS</h2>
+                <p class="text-[10px] mb-8 text-zinc-500 font-medium">NOKOS </p>
+                <div class="text-xl font-black text-white mb-6">Rp 5.000</div>
+                <a href="https://wa.me/6283131708820" class="btn-premium block text-center bg-zinc-100 text-black py-3 rounded-lg text-[10px] font-black hover:bg-white tracking-widest uppercase transition-all">ORDER NOW</a>
+            </div>
+
+            <!-- Murbug -->
+            <div class="card-dark p-8 rounded-2xl transition-all duration-500 group">
+                <div class="w-10 h-10 border border-zinc-800 rounded-lg flex items-center justify-center mb-6 group-hover:border-blue-600 transition-colors">
+                    <i class="fas fa-bug text-zinc-700 group-hover:text-blue-500"></i>
+                </div>
+                <h2 class="text-white font-bold text-lg mb-1 italic">MURBUG</h2>
+                <p class="text-[10px] mb-8 text-zinc-500 font-medium">BISA BUG SEPUASNYA.</p>
+                <div class="text-xl font-black text-white mb-6">Rp 15.000</div>
+                <a href="https://wa.me/6283131708820" class="btn-premium block text-center bg-zinc-100 text-black py-3 rounded-lg text-[10px] font-black hover:bg-white tracking-widest uppercase transition-all">ORDER NOW</a>
+            </div>
+
+            <!-- Panel -->
+            <div class="card-dark p-8 rounded-2xl transition-all duration-500 group">
+                <div class="w-10 h-10 border border-zinc-800 rounded-lg flex items-center justify-center mb-6 group-hover:border-blue-600 transition-colors">
+                    <i class="fas fa-server text-zinc-700 group-hover:text-blue-500"></i>
+                </div>
+                <h2 class="text-white font-bold text-lg mb-1 italic">PANEL</h2>
+                <p class="text-[10px] mb-8 text-zinc-500 font-medium">Pterodactyl, high ram unlimited, 24/7 online uptime.</p>
+                <div class="text-xl font-black text-white mb-6">Rp 7.000</div>
+                <a href="https://wa.me/6283131708820" class="btn-premium block text-center bg-zinc-100 text-black py-3 rounded-lg text-[10px] font-black hover:bg-white tracking-widest uppercase transition-all">ORDER NOW</a>
+            </div>
+
+            <!--Jasa Push CH -->
+            <div class="card-dark p-8 rounded-2xl transition-all duration-500 group">
+                <div class="w-10 h-10 border border-zinc-800 rounded-lg flex items-center justify-center mb-6 group-hover:border-blue-600 transition-colors">
+                    <i class="fas fa-bolt text-zinc-700 group-hover:text-blue-500"></i>
+                </div>
+                <h2 class="text-white font-bold text-lg mb-1 italic">PUSH CH</h2>
+                <p class="text-[10px] mb-8 text-zinc-500 font-medium">ANTI SUNTIK PUSH PAKE BAILES PENGIKUT ORANG INDO SEMUA.</p>
+                <div class="text-xl font-black text-white mb-6">Rp 5.000</div>
+                <a href="https://wa.me/6283131708820" class="btn-premium block text-center bg-zinc-100 text-black py-3 rounded-lg text-[10px] font-black hover:bg-white tracking-widest uppercase transition-all">ORDER NOW</a>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Audio Element -->
+    <audio id="bgMusic" loop>
+        <source src="https://files.catbox.moe/o918jh.mp3" type="audio/mpeg">
+    </audio>
+
+    <footer class="mt-20 py-10 text-center opacity-20">
+        <p class="text-[8px] tracking-[0.5em] uppercase font-black">RILZ STORE © 2026 </p>
+    </footer>
+
+    <script>
+        const music = document.getElementById("bgMusic");
+        const musicBtn = document.getElementById("musicBtn");
+        const musicIcon = document.getElementById("musicIcon");
+
+        function toggleMusic() {
+            if (music.paused) {
+                music.play();
+                musicIcon.classList.remove("fa-play");
+                musicIcon.classList.add("fa-pause");
+                musicBtn.classList.add("bg-red-600");
+                musicBtn.classList.remove("bg-blue-600");
+            } else {
+                music.pause();
+                musicIcon.classList.remove("fa-pause");
+                musicIcon.classList.add("fa-play");
+                musicBtn.classList.add("bg-blue-600");
+                musicBtn.classList.remove("bg-red-600");
+            }
+        }
+    </script>
+</body>
+</html>
